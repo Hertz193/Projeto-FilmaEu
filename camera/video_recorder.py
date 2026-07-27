@@ -9,9 +9,9 @@ class VideoRecorder:
         self.size = frame_size
 
     def save(self, frames, filename):
-
+        self.filename = filename
         writer = cv.VideoWriter(
-            filename,
+            self.filename,
             cv.VideoWriter_fourcc(*'mp4v'),
             self.fps,
             self.size

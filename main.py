@@ -1,4 +1,5 @@
 import cv2 as cv
+from datetime import datetime
 
 # Aqui ocorre a junção de todas as classes (camera, video e replaysbuffer)
 
@@ -21,9 +22,10 @@ while True:
     key = cv.waitKey(1)
 
     if key == ord("s"):
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         video.save(
             buffer.get_frames(),
-            "replay.mp4"
+            f"replay_{timestamp}.mp4"
         )
 
     if key == 27:  # 27 == ESC
