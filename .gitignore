@@ -2,4 +2,6 @@
 *.db
 .venv/
 __pycache__/
+camera/__pycache__/
+server/__pycache__/
 *.pyc
