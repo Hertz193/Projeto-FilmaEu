@@ -1,35 +1,29 @@
 import cv2 as cv
 from datetime import datetime
+from camera.master_cam import MasterCam
 
-# Aqui ocorre a junção de todas as classes (camera, video e replaysbuffer)
+# Aqui ocorre a inicialização do sistema
 
-from camera.video_recorder import VideoRecorder
-from camera.cam_capture import Camera
-from camera.replay_buffer import ReplaysBuffer
-
-cam = Camera(0) # 0 para webcam, troque pelo IP que a câmera estiver transmitindo
-buffer = ReplaysBuffer(cam.get_fps(), 30)
-video = VideoRecorder(cam.get_fps(), cam.get_frame_size())
+cam = MasterCam("http://192.168.0.5:4747/video")  # 0 para webcam, troque pelo IP que a câmera estiver transmitindo
 
 while True:
-    validation, frame = cam.read()
+    cam.update()
+    frame = cam.update()
 
-    if not validation:
-        break
+    if frame is not None:
+        cv.imshow("Camera", frame)
 
-    buffer.add(frame)
-    cv.imshow("Replay", frame)
     key = cv.waitKey(1)
 
-    if key == ord("s"):
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        video.save(
-            buffer.get_frames(),
-            f"replay_{timestamp}.mp4"
-        )
+    if key == ord('s'):
+        filetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    if key == 27:  # 27 == ESC
+        filename = f"replay_{filetime}.mp4"
+
+        cam.save_replay(filename)
+        cam.send_replay(filename)
+    elif key == 27:  # ESC 
         break
 
-cam.release()
+cam.camera.release()
 cv.destroyAllWindows()
