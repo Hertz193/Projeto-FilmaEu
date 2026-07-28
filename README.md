@@ -38,6 +38,7 @@ camera/
 ├── master_cam.py
 ├── cam_capture.py
 ├── replay_buffer.py
+├── uploader.py
 └── video_recorder.py
 |
 server/
