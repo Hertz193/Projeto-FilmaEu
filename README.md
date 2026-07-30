@@ -30,15 +30,29 @@ O projeto utiliza uma câmera IP conectada a um Raspberry Pi para manter um buff
 
 ```
 ReplaySystem/
-
+|
 camera/
 │
 ├── __init__.py
-├── camera.py
+├── main.py
+├── master_cam.py
+├── cam_capture.py
 ├── replay_buffer.py
+├── uploader.py
 └── video_recorder.py
-
-main.py
+|
+server/
+|
+├── __init__.py
+├── api.py
+├── database.py
+├── main.py
+└── data/
+|    └── filmaeu.db
+|
+ui/
+|
+.gitignore
 requirements.txt
 README.md
 ```
