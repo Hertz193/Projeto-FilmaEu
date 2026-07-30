@@ -7,9 +7,9 @@ class Camera:
     def __init__(self, camera_id):
         self.cap = cv.VideoCapture(camera_id)
         
-        self.width = self.cap.get(cv.CAP_PROP_FRAME_WIDTH)
-        self.height = self.cap.get(cv.CAP_PROP_FRAME_HEIGHT)
-        self.fps = self.cap.get(cv.CAP_PROP_FPS)
+        self.width = int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH))
+        self.height = int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))
+        self.fps = int(self.cap.get(cv.CAP_PROP_FPS))
 
     def read(self):
         validation, frame = self.cap.read()

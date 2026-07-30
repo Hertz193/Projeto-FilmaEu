@@ -4,7 +4,7 @@ from camera.master_cam import MasterCam
 
 # Aqui ocorre a inicialização do sistema
 
-cam = MasterCam("http://192.168.0.5:4747/video")  # 0 para webcam, troque pelo IP que a câmera estiver transmitindo
+cam = MasterCam(0)  # 0 para webcam, troque pelo IP que a câmera estiver transmitindo
 
 while True:
     cam.update()
@@ -16,7 +16,7 @@ while True:
     key = cv.waitKey(1)
 
     if key == ord('s'):
-        filetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        filetime = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
         filename = f"replay_{filetime}.mp4"
 
