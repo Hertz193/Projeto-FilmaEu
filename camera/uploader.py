@@ -2,6 +2,8 @@ import os
 from urllib import response
 import requests
 
+# Aqui é onde envia o vídeo pro servidor com a URL
+
 class Uploader:
     def __init__(self, server_url):
         self.server_url = server_url
