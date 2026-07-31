@@ -1,6 +1,0 @@
-opencv-python
-fastapi
-uvicorn
-requests
-python-multipart
-jinja2

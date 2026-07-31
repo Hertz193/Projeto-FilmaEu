@@ -14,7 +14,7 @@ class MasterCam:
 
         self.buffer = ReplaysBuffer(fps, 30)
         self.recorder = VideoRecorder(fps, size)
-        self.uploader = Uploader(self.camera)
+        self.uploader = Uploader("http://127.0.0.1:8000")  # Colocar a URL do servidor FastAPI aqui
 
     def update(self):
         frame = self.camera.read()

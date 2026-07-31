@@ -22,7 +22,7 @@ while True:
 
         cam.save_replay(filename)
         cam.send_replay(filename)
-    elif key == 27:  # ESC 
+    elif key == 27:  # ESC
         break
 
 cam.camera.release()
