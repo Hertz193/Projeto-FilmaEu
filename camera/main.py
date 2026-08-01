@@ -16,7 +16,7 @@ while True:
     key = cv.waitKey(1)
 
     if key == ord('s'):
-        filetime = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
+        filetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
         filename = f"replay_{filetime}.mp4"
 
