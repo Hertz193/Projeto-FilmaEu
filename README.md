@@ -28,17 +28,17 @@ O projeto utiliza câmeras IP conectadas a Raspberry Pis para gravar continuamen
                      │
                      │ Upload HTTP
                      ▼
-            FastAPI (Servidor)
-        ┌──────────────────────┐
-        │ Recebe os vídeos      │
-        │ Converte com FFmpeg   │
-        │ Gerencia os arquivos  │
-        └──────────┬────────────┘
-                   │
-                   ▼
+              FastAPI (Servidor)
+          ┌───────────────────────┐
+          │ Recebe os vídeos      │
+          │ Converte com FFmpeg   │
+          │ Gerencia os arquivos  │
+          └──────────┬────────────┘
+                     │
+                     ▼
           Interface Web (Streamlit)
-                   │
-        Reprodução e download
+                     │
+           Reprodução e download
 ```
 
 ---
