@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "http://192.168.0.7:8000" # Colocar a URL do servidor aqui
 
 st.set_page_config(page_title="Streaming de Vídeos", layout="wide")
 st.title("Replays IFF")
@@ -46,8 +46,6 @@ if videos:
     st.video(url_video)
 else:
     st.info("Nenhum replay encontrado para a data selecionada.")
-
-st.header("________________________________________________________________________")
 
 st.header("O que é o Replay IFF?")
 

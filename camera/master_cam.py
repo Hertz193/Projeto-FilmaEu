@@ -14,7 +14,7 @@ class MasterCam:
 
         self.buffer = ReplaysBuffer(fps, 30)
         self.recorder = VideoRecorder(fps, size)
-        self.uploader = Uploader("http://127.0.0.1:8000")  # Colocar a URL do servidor aqui
+        self.uploader = Uploader("http://192.168.0.7:8000")  # Colocar a URL do servidor aqui
 
     def update(self):
         frame = self.camera.read()
