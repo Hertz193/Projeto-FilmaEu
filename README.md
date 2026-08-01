@@ -28,17 +28,17 @@ O projeto utiliza câmeras IP conectadas a Raspberry Pis para gravar continuamen
                      │
                      │ Upload HTTP
                      ▼
-            FastAPI (Servidor)
-        ┌──────────────────────┐
-        │ Recebe os vídeos      │
-        │ Converte com FFmpeg   │
-        │ Gerencia os arquivos  │
-        └──────────┬────────────┘
-                   │
-                   ▼
+              FastAPI (Servidor)
+          ┌───────────────────────┐
+          │ Recebe os vídeos      │
+          │ Converte com FFmpeg   │
+          │ Gerencia os arquivos  │
+          └──────────┬────────────┘
+                     │
+                     ▼
           Interface Web (Streamlit)
-                   │
-        Reprodução e download
+                     │
+           Reprodução e download
 ```
 
 ---
@@ -130,7 +130,9 @@ pip install -r requirements.txt
 
 ## Executando
 
-### 1. Inicie a API
+## 1. Coloque as devidas URLs e os IPs certos nos campos necessários
+
+### 2. Inicie a API
 
 ```bash
 uvicorn api:app --host 0.0.0.0 --port 8000
@@ -138,7 +140,7 @@ uvicorn api:app --host 0.0.0.0 --port 8000
 
 ---
 
-### 2. Inicie a interface
+### 3. Inicie a interface
 
 ```bash
 streamlit run app.py --server.address 0.0.0.0
@@ -146,7 +148,7 @@ streamlit run app.py --server.address 0.0.0.0
 
 ---
 
-### 3. Inicie o Raspberry Pi
+### 4. Inicie o Raspberry Pi
 
 ```bash
 python camera/main.py
