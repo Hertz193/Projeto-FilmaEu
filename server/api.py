@@ -43,6 +43,8 @@ def ler_arquivo_em_blocos(file_obj: BinaryIO, start: int, chunk_size: int, file_
 
 @app.post("/upload")
 async def upload_video(video: UploadFile = File(...)):
+    print(">>> ENTROU EM /upload")
+
     limpar_videos_antigos()
 
     nome_original = video.filename
@@ -59,6 +61,10 @@ async def upload_video(video: UploadFile = File(...)):
             shutil.copyfileobj(video.file, buffer)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao salvar arquivo temporário: {str(e)}")
+
+    print("Cheguei antes do FFmpeg")
+    print(CAMINHO_FFMPEG)
+    print(os.path.exists(CAMINHO_FFMPEG))
 
     # executa a conversão com FFmpeg
     try:
@@ -113,6 +119,8 @@ async def list_videos():
 
 @app.get("/video/{filename}")
 async def get_video(filename: str, range: str = Header(None)):
+    print(">>> ENTROU EM /video")
+
     filename = Path(filename).name
     file_path = os.path.join(UPLOAD_FOLDER, filename)
 
@@ -186,6 +194,8 @@ async def search_videos(date: str):
 
 @app.get("/download/{filename}")
 async def download_video(filename: str):
+    print(">>> ENTROU EM /download")
+
     filename = Path(filename).name
     file_path = os.path.join(UPLOAD_FOLDER, filename)
 

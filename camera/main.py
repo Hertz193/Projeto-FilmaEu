@@ -4,7 +4,7 @@ from camera.master_cam import MasterCam
 
 # Aqui ocorre a inicialização do sistema
 
-cam = MasterCam(0)  # 0 para webcam, troque pelo IP que a câmera estiver transmitindo
+cam = MasterCam(0)  # 0 para webcam, troque pelo IP (no formato: http://ip_da_câmera/video ou rtsp://usuario:senha@ip_da_câmera/porta) que a câmera estiver transmitindo
 
 while True:
     cam.update()
