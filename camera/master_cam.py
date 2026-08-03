@@ -6,7 +6,7 @@ from camera.uploader import Uploader
 # Aqui ocorre a junção de todas as classes (camera, video e replaysbuffer)
 
 class MasterCam:
-    def __init__(self, camera_id):
+    def __init__(self, camera_id): 
         self.camera = Camera(camera_id)
 
         fps = self.camera.get_fps()
@@ -14,7 +14,7 @@ class MasterCam:
 
         self.buffer = ReplaysBuffer(fps, 30)
         self.recorder = VideoRecorder(fps, size)
-        self.uploader = Uploader("http://192.168.0.7:8000")  # Colocar a URL do servidor aqui
+        self.uploader = Uploader("http://192.168.0.7:8000")  # Colocar a URL do servidor aqui (sempre no formato http://IP:PORTA)
 
     def update(self):
         frame = self.camera.read()

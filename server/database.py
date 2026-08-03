@@ -1,0 +1,1 @@
+# Possível implementação no futuro para salvar os vídeos em um banco de dados, caso seja necessário. Por enquanto, os vídeos são salvos diretamente no sistema de arquivos do servidor.

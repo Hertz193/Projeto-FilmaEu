@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://192.168.0.7:8000" # Colocar a URL do servidor aqui
+API_URL = "http://192.168.0.7:8000" # Colocar a URL do servidor aqui (sempre no formato http://IP:PORTA)
 
 st.set_page_config(page_title="Replays IFF", layout="wide")
 st.title("Replays IFF")

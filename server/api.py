@@ -16,7 +16,7 @@ app = FastAPI()
 UPLOAD_FOLDER = "videos"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-CAMINHO_FFMPEG = r"C:\ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe"
+CAMINHO_FFMPEG = r"C:\ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe" # caminho do executável do FFmpeg, necessário para a conversão de vídeos. Certifique-se de que o caminho esteja correto e que o FFmpeg esteja instalado.
 
 def limpar_videos_antigos():
     limite = datetime.now() - timedelta(hours=48)

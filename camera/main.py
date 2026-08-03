@@ -15,14 +15,13 @@ while True:
 
     key = cv.waitKey(1)
 
-    if key == ord('s'):
+    if key == ord('s'): # será trocado pelo botão no hardware do Raspberry Pi, por enquanto é o 's' do teclado (save)
         filetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
         filename = f"replay_{filetime}.mp4"
-
+        
         cam.save_replay(filename)
         cam.send_replay(filename)
-    elif key == 27:  # ESC
+    elif key == 27:  # ESC para sair e finalizar o programa
         break
 
 cam.camera.release()

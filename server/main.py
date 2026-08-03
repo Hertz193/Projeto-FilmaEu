@@ -1,0 +1,1 @@
+# Caso o database.py seja usado no futuro, aqui irá se juntar a API com o banco de dados.

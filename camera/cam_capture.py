@@ -1,6 +1,6 @@
 import cv2 as cv
 
-# Aqui fica ligação com a câmera
+# Aqui fica ligação com a câmera, capturando os frames, o tamanho do frame e o FPS da câmera, para que seja possível gravar o replay corretamente. Além disso, é responsável por liberar a câmera quando o programa é finalizado.
 
 class Camera:
 
