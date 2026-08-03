@@ -3,7 +3,7 @@ import requests
 
 API_URL = "http://192.168.0.7:8000" # Colocar a URL do servidor aqui
 
-st.set_page_config(page_title="Streaming de Vídeos", layout="wide")
+st.set_page_config(page_title="Replays IFF", layout="wide")
 st.title("Replays IFF")
 
 st.header("Encontre seu Replay")
