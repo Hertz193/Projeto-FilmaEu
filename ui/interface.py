@@ -49,11 +49,11 @@ else:
 
 st.header("O que é o Replays IFF?")
 
-st.write("O Replays IFF é uma plataforma dedicada a fornecer acesso a replays de jogos que ocorreram nas quadras poliesporticas do IFF (Instituto Federal Fluminense). Nosso objetivo é permitir que jogadores, treinadores e entusiastas do esporte possam rever partidas, analisar desempenhos e compartilhar momentos marcantes. Através de uma interface simples e intuitiva, os usuários podem buscar replays por data, assistir aos vídeos diretamente na plataforma e explorar o histórico de jogos realizados no IFF. Com o Replays IFF, a experiência esportiva se torna mais acessível e interativa para todos os envolvidos.")
+st.write("O Replays IFF é uma plataforma dedicada a fornecer acesso a replays de jogos que ocorreram nas quadras poliesportivas do IFF (Instituto Federal Fluminense). Nosso objetivo é permitir que jogadores, treinadores e entusiastas do esporte possam rever, analisar e compartilhar momentos marcantes. Através de uma interface simples e intuitiva, os usuários podem buscar replays por data, assistir aos vídeos diretamente na plataforma ou exportar para seu dispositivo e explorar o histórico de jogos realizados no IFF. Com o Replays IFF, a experiência esportiva se torna mais acessível e interativa para todos os envolvidos.")
 
 st.header("Como funciona o Replays IFF?")
 
-st.write("Uma vez que um jogo é realizado nas quadras do IFF, a partida é gravada e assim que o botão de salvar replay é pressionado, o vídeo é armazenado em nosso servidor. Os vídeos são então processados e disponibilizados na plataforma Replays IFF. Os usuários podem acessar a plataforma, selecionar a data do jogo desejado e escolher entre os replays disponíveis para assistir. A plataforma pode ser acessada pelo QR Code fornecido no local do jogo ou através do link compartilhado no perfil do Instagram sportsIFFmacaé.")
+st.write("Uma vez que um jogo é realizado nas quadras do IFF, a partida é gravada por um sistema de câmeras e assim que o botão de salvar replay é pressionado, os últimos 30 segundos da gravação são armazenados em nosso servidor. Os vídeos são então processados e disponibilizados na plataforma Replays IFF. Os usuários podem acessar a plataforma, selecionar a data do jogo desejado e escolher entre os replays disponíveis para assistir. A plataforma pode ser acessada pelo QR Code fornecido no local do jogo ou através do link compartilhado no perfil do Instagram sportsIFFmacaé.")
 
 st.subheader("Créditos e Agradecimentos")
 st.write("Hugo Rafael de Medeiros - Desenvolvedor do sistema")
